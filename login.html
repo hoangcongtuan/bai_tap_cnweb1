@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Login</title>
+
+        <script lang="JavaScript">
+            function validateForm() {               
+                var userName = document.form_login.edt_user_name.value;
+                var password = document.form_login.edt_password.value;
+        
+                if (userName.trim() === '' || password.trim() ==='') {
+                    alert("Chua dien du UserName or Password");
+                    return false;
+                }
+
+                return true;
+            }
+        </script>
+    </head>
+
+    <body>
+        <form method="POST" action="xu_ly_login.php" name="form_login" onsubmit="return validateForm()">
+            <p align = center>Đăng nhập</p>
+            <p align = center>
+                <table>
+                    <tr>
+                        <td>User Name</td> <td><input type="text" name="edt_user_name"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Password</td> <td><input type="password" name="edt_password"></td>
+                    </tr>
+
+                </table>
+            </p>          
+            <p align = center><input type="submit" value="login" name="btn_login"></p>          
+        </form>
+    </body>
+</html>
